@@ -12,7 +12,7 @@
    - ✔️ J. Ханойские башни
 
 </details>
-<details open="true"><summary>❌ HomeWork2 «Очереди, деки, кучи»</summary>
+<details><summary>✔️ HomeWork2 «Очереди, деки, кучи»</summary>
 
    - ✔️ A. Очередь с защитой от ошибок
    - ✔️ B. Карточная игра
@@ -23,5 +23,6 @@
    - ✔️ G. Хипуй
    - ✔️ H. Strategy tetris
    - ✔️ I. Коммерческий калькулятор
+   - ✔️ J. Медиана
 
 </details>
