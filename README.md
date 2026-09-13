@@ -26,3 +26,9 @@
    - ✔️ J. Медиана
 
 </details>
+<details open="true"><summary>❌ HomeWork3 «Сортировки: быстрая, слиянием, пирамидальная»</summary>
+
+   - ✔️ A. Partition
+   - ❌ B. Быстрая сортировка
+
+</details>
