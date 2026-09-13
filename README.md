@@ -29,6 +29,6 @@
 <details open="true"><summary>❌ HomeWork3 «Сортировки: быстрая, слиянием, пирамидальная»</summary>
 
    - ✔️ A. Partition
-   - ❌ B. Быстрая сортировка
+   - ✔️ B. Быстрая сортировка
 
 </details>
