@@ -121,6 +121,7 @@ class Solver:
             right_median_i = k // 2
             right_median = self.nth_element(elements, right_median_i)
             median = (left_median + right_median) / 2
+            median = int(median) if median.is_integer() else median
 
         return median
 
