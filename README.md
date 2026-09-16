@@ -1,3 +1,5 @@
+# [Тренировки по алгоритмам 10.0](https://yandex.ru/yaintern/training/algorithm-training)
+
 <details><summary>✔️ HomeWork1 «Стеки»</summary>
 
    - ✔️ A. Правильная скобочная последовательность
