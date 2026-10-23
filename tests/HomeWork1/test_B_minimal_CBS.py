@@ -5,7 +5,7 @@ sys.path.append(parent_dir)
 
 import pytest
 from pytest import param
-from HomeWork1.B_minimal_CBS import Solver
+from HomeWork1.B_minimal_CBS.main import main
 
 
 @pytest.mark.parametrize(
@@ -49,6 +49,5 @@ from HomeWork1.B_minimal_CBS import Solver
         ),
     ],
 )
-def test_solve(lines, expected):
-    solver = Solver.from_strings(lines)
-    assert solver.solve() == expected
+def test_main(lines, expected):
+    assert main(lines) == expected

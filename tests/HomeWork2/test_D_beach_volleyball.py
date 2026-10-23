@@ -5,7 +5,7 @@ sys.path.append(parent_dir)
 
 import pytest
 from pytest import param
-from HomeWork2.D_beach_volleyball import Solver
+from HomeWork2.D_beach_volleyball.main import main
 
 
 @pytest.mark.parametrize(
@@ -35,6 +35,5 @@ from HomeWork2.D_beach_volleyball import Solver
         ),
     ],
 )
-def test_solve(lines, expected):
-    solver = Solver.from_strings(lines)
-    assert solver.solve() == expected
+def test_main(lines, expected):
+    assert main(lines) == expected

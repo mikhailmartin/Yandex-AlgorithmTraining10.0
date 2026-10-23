@@ -5,7 +5,7 @@ sys.path.append(parent_dir)
 
 import pytest
 from pytest import param
-from HomeWork3.I_heap_sort_number_of_exchanges import Solver
+from HomeWork3.I_heap_sort_number_of_exchanges.main import main
 
 
 @pytest.mark.parametrize(
@@ -37,6 +37,5 @@ from HomeWork3.I_heap_sort_number_of_exchanges import Solver
         ),
     ],
 )
-def test_solve(lines, expected):
-    solver = Solver.from_strings(lines)
-    assert solver.solve() == expected
+def test_main(lines, expected):
+    assert main(lines) == expected

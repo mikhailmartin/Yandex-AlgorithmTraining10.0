@@ -5,7 +5,7 @@ sys.path.append(parent_dir)
 
 import pytest
 from pytest import param
-from HomeWork1.A_correct_bracket_sequence import Solver
+from HomeWork1.A_correct_bracket_sequence.main import main
 
 
 @pytest.mark.parametrize(
@@ -28,6 +28,5 @@ from HomeWork1.A_correct_bracket_sequence import Solver
         ),
     ],
 )
-def test_solve(lines, expected):
-    solver = Solver.from_strings(lines)
-    assert solver.solve() == expected
+def test_main(lines, expected):
+    assert main(lines) == expected

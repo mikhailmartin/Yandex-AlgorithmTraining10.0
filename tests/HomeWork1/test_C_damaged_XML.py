@@ -5,8 +5,10 @@ sys.path.append(parent_dir)
 
 import pytest
 from pytest import param
-from HomeWork1.C_damaged_XML import (
-    Solver,
+from HomeWork1.C_damaged_XML.main import (
+    main,
+    parse_tags,
+    is_valid_xml,
     Tag,
     TagType,
     # синтаксические ошибки
@@ -40,7 +42,7 @@ from HomeWork1.C_damaged_XML import (
     ],
 )
 def test_parse_tags(string, expected):
-    assert Solver._parse_tags(list(string)) == expected
+    assert parse_tags(list(string)) == expected
 
 
 @pytest.mark.parametrize(
@@ -84,7 +86,7 @@ def test_parse_tags(string, expected):
 )
 def test_parse_tags_with_errors(string, expected_error, pos):
     with pytest.raises(expected_error) as exec_info:
-        Solver._parse_tags(list(string))
+        parse_tags(list(string))
         assert exec_info.value.pos == pos
 
 
@@ -95,8 +97,8 @@ def test_parse_tags_with_errors(string, expected_error, pos):
     ],
 )
 def test__is_valid_xml(string):
-    tags = Solver._parse_tags(list(string))
-    assert Solver._is_valid_xml(tags) == True
+    tags = parse_tags(list(string))
+    assert is_valid_xml(tags) == True
 
 
 @pytest.mark.parametrize(
@@ -110,9 +112,9 @@ def test__is_valid_xml(string):
     ],
 )
 def test__is_valid_xml_errors(string, expected_error):
-    tags = Solver._parse_tags(list(string))
+    tags = parse_tags(list(string))
     with pytest.raises(expected_error):
-        Solver._is_valid_xml(tags)
+        is_valid_xml(tags)
 
 
 @pytest.mark.parametrize(
@@ -163,6 +165,5 @@ def test__is_valid_xml_errors(string, expected_error):
         ),
     ],
 )
-def test_solve(lines, expected):
-    solver = Solver.from_strings(lines)
-    assert solver.solve() == expected
+def test_main(lines, expected):
+    assert main(lines) == expected
